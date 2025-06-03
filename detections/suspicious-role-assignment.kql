@@ -1,5 +1,0 @@
-AzureActivity
-| where OperationNameValue == "Microsoft.Authorization/roleAssignments/write"
-| where ActivityStatusValue == "Success"
-| where Properties has "Owner" or Properties has "Contributor"
-| project TimeGenerated, Caller, ResourceGroup, Properties, ActivityStatusValue
